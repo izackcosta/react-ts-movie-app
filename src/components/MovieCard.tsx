@@ -1,14 +1,9 @@
-import React from 'react';
+import type {FC} from 'react';
+import type { MovieCardProps } from '../types';
 
-type MovieCardProps = {
-    title : string,
-    imageLink : string,
-    releaseYear : number
-};
+const MovieCard: FC<MovieCardProps> = (movie : MovieCardProps) => {
 
-const MovieCard: React.FC<MovieCardProps> = (movie : MovieCardProps) => {
-
-    let onFavoriteClick = () => console.log(`Favorite clicked for ${movie.title}`);
+    const onFavoriteClick = () => console.log(`Favorite clicked for ${movie.title}`);
 
     return (
         <div className='movie-card'>
